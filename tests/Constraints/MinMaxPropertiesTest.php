@@ -168,12 +168,4 @@ class MinMaxPropertiesTest extends BaseTestCase
             ],
         ];
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getInvalidForAssocTests()
-    {
-        return array();
-    }
 }
