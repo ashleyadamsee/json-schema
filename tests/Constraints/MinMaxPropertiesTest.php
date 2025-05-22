@@ -86,6 +86,26 @@ class MinMaxPropertiesTest extends BaseTestCase
                   }
                 }'
             ],
+            'String with two properties with minProperties: 1 and maxProperties: 2' => [
+                'input' => '{
+                  "value": "foo"
+                }',
+                'schema' => '{
+                  "properties": {
+                    "value": "value": {"minProperties": 1,"maxProperties": 2}
+                  }
+                }'
+            ],
+            'Integer with two properties with minProperties: 1 and maxProperties: 2' => [
+                'input' => '{
+                  "value": 42
+                }',
+                'schema' => '{
+                  "properties": {
+                    "value": "value": {"minProperties": 1,"maxProperties": 2}
+                  }
+                }'
+            ],
         ];
     }
 
@@ -147,5 +167,13 @@ class MinMaxPropertiesTest extends BaseTestCase
                 }'
             ],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getInvalidForAssocTests()
+    {
+        return array();
     }
 }
